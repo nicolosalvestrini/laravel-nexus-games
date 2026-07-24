@@ -1,4 +1,50 @@
 @import "bootstrap/dist/css/bootstrap.min.css";
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+
+:root {
+  --ng-bg: #0b0b14;
+  --ng-surface: #15151f;
+  --ng-border: #2a2a3a;
+  --ng-primary: #7c3aed;
+  --ng-primary-hover: #6d28d9;
+}
+
+body {
+  background-color: var(--ng-bg);
+  color: #f1f1f4;
+}
+
+.ng-card {
+  background-color: var(--ng-surface);
+  border: 1px solid var(--ng-border);
+  border-radius: 0.75rem;
+}
+
+.form-control {
+  background-color: #0f0f18;
+  border-color: var(--ng-border);
+  color: #f1f1f4;
+}
+
+.form-control:focus {
+  background-color: #0f0f18;
+  border-color: var(--ng-primary);
+  color: #f1f1f4;
+  box-shadow: 0 0 0 0.25rem rgba(124, 58, 237, 0.25);
+}
+
+.form-label,
+.form-check-label {
+  color: #d1d1db;
+}
+
+.btn-ng-primary {
+  background-color: var(--ng-primary);
+  border-color: var(--ng-primary);
+  color: #fff;
+}
+
+.btn-ng-primary:hover {
+  background-color: var(--ng-primary-hover);
+  border-color: var(--ng-primary-hover);
+  color: #fff;
+}
