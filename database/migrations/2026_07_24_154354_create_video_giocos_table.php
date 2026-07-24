@@ -11,8 +11,13 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('video_giocos', function (Blueprint $table) {
+        Schema::create('video_giochi', function (Blueprint $table) {
             $table->id();
+            $table->string('titolo');
+            $table->text('descrizione')->nullable();
+            $table->year('anno_uscita')->nullable();
+            $table->decimal('voto', 3, 1)->nullable();
+            $table->string('copertina')->nullable();
             $table->timestamps();
         });
     }
