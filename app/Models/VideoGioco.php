@@ -2,11 +2,19 @@
 
 namespace App\Models;
 
+use Illuminate\Support\Facades\Storage;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
 class VideoGioco extends Model
 {
+    protected $appends = ['copertina_url'];
+
+    public function getCopertinaUrlAttribute(): ?string
+    {
+        return $this->copertina ? Storage::url($this->copertina) : null;
+    }
+    
     use HasFactory;
 
     protected $table = 'video_giochi';
