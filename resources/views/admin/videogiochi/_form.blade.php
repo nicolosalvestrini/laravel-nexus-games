@@ -46,7 +46,7 @@
 
     @if (isset($videoGioco) && $videoGioco->copertina)
     <img src="{{ Storage::url($videoGioco->copertina) }}" alt="Copertina attuale"
-        class="rounded border mt-2 d-block" style="max-height: 120px;">
+        class="rounded border mt-2 d-block ng-cover-md">
     @endif
 </div>
 

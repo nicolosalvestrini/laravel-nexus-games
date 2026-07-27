@@ -4,10 +4,10 @@
 
 @section('content')
 <div class="card p-4">
-    
+
     @if ($videoGioco->copertina)
     <img src="{{ Storage::url($videoGioco->copertina) }}" alt="{{ $videoGioco->titolo }}"
-        class="rounded mb-3" style="max-height: 300px;">
+        class="rounded mb-3 ng-cover-lg">
     @endif
 
     <h1 class="h3">{{ $videoGioco->titolo }}</h1>

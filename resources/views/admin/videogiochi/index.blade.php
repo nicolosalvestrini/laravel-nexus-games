@@ -24,7 +24,7 @@
             <tr>
                 <td style="width: 70px;">
                     @if ($videoGioco->copertina)
-                    <img src="{{ Storage::url($videoGioco->copertina) }}" alt="" style="height: 50px;" class="rounded">
+                    <img src="{{ Storage::url($videoGioco->copertina) }}" alt="" class="rounded ng-cover-sm">
                     @endif
                 </td>
                 <td>{{ $videoGioco->titolo }}</td>

@@ -59,3 +59,21 @@ body {
     border-color: var(--ng-border);
     color: #f1f1f4;
 }
+.ng-cover-sm {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+}
+
+.ng-cover-md {
+    width: 140px;
+    height: 140px;
+    object-fit: cover;
+}
+
+.ng-cover-lg {
+    width: 100%;
+    max-width: 320px;
+    height: 320px;
+    object-fit: cover;
+}
