@@ -12,6 +12,7 @@
     <table class="table table-dark table-hover align-middle mb-0">
         <thead>
             <tr>
+                <th>Copertina</th>
                 <th>Titolo</th>
                 <th>Anno</th>
                 <th>Voto</th>
@@ -21,6 +22,11 @@
         <tbody>
             @forelse ($videoGiochi as $videoGioco)
             <tr>
+                <td style="width: 70px;">
+                    @if ($videoGioco->copertina)
+                    <img src="{{ Storage::url($videoGioco->copertina) }}" alt="" style="height: 50px;" class="rounded">
+                    @endif
+                </td>
                 <td>{{ $videoGioco->titolo }}</td>
                 <td>{{ $videoGioco->anno_uscita }}</td>
                 <td>{{ $videoGioco->voto }}</td>
@@ -36,7 +42,7 @@
             </tr>
             @empty
             <tr>
-                <td colspan="4" class="text-center text-white-50 py-4">Nessun videogioco presente.</td>
+                <td colspan="5" class="text-center text-white-50 py-4">Nessun videogioco presente.</td>
             </tr>
             @endforelse
         </tbody>

@@ -6,7 +6,7 @@
 <h1 class="h3 mb-4">Modifica: {{ $videoGioco->titolo }}</h1>
 
 <div class="card p-4">
-    <form method="POST" action="{{ route('videogiochi.update', $videoGioco) }}">
+    <form method="POST" action="{{ route('videogiochi.update', $videoGioco) }}" enctype="multipart/form-data">
         @csrf
         @method('PUT')
 

@@ -14,7 +14,7 @@
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark ng-navbar">
         <div class="container">
-            <a class="navbar-brand fw-bold" href="{{ route('dashboard') }}">🎮 NEXUS GAMES</a>
+            <a class="navbar-brand fw-bold" href="{{ route('videogiochi.index') }}">🎮 NEXUS GAMES</a>
 
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarAdmin">
                 <span class="navbar-toggler-icon"></span>
@@ -22,7 +22,6 @@
 
             <div class="collapse navbar-collapse" id="navbarAdmin">
                 <ul class="navbar-nav me-auto">
-                    <a class="navbar-brand fw-bold" href="{{ route('videogiochi.index') }}">🎮 NEXUS GAMES</a>
                     <li class="nav-item">
                         <a class="nav-link {{ request()->routeIs('videogiochi.*') ? 'active' : '' }}" href="{{ route('videogiochi.index') }}">Videogiochi</a>
                     </li>

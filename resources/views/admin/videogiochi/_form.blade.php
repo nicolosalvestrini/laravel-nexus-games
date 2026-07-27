@@ -49,3 +49,27 @@
         class="rounded border mt-2 d-block" style="max-height: 120px;">
     @endif
 </div>
+
+<div class="mb-3">
+    <label class="form-label d-block">Generi</label>
+    @foreach ($generi as $genere)
+    <div class="form-check form-check-inline">
+        <input type="checkbox" class="form-check-input" name="generi[]" id="genere_{{ $genere->id }}"
+            value="{{ $genere->id }}"
+            @checked(in_array($genere->id, old('generi', isset($videoGioco) ? $videoGioco->generi->pluck('id')->toArray() : []))) >
+        <label class="form-check-label" for="genere_{{ $genere->id }}">{{ $genere->nome }}</label>
+    </div>
+    @endforeach
+</div>
+
+<div class="mb-3">
+    <label class="form-label d-block">Piattaforme</label>
+    @foreach ($piattaforme as $piattaforma)
+    <div class="form-check form-check-inline">
+        <input type="checkbox" class="form-check-input" name="piattaforme[]" id="piattaforma_{{ $piattaforma->id }}"
+            value="{{ $piattaforma->id }}"
+            @checked(in_array($piattaforma->id, old('piattaforme', isset($videoGioco) ? $videoGioco->piattaforme->pluck('id')->toArray() : []))) >
+        <label class="form-check-label" for="piattaforma_{{ $piattaforma->id }}">{{ $piattaforma->nome }}</label>
+    </div>
+    @endforeach
+</div>

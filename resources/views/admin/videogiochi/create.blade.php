@@ -6,7 +6,7 @@
 <h1 class="h3 mb-4">Nuovo videogioco</h1>
 
 <div class="card p-4">
-    <form method="POST" action="{{ route('videogiochi.store') }}">
+    <form method="POST" action="{{ route('videogiochi.store') }}" enctype="multipart/form-data">
         @csrf
 
         @include('admin.videogiochi._form')
